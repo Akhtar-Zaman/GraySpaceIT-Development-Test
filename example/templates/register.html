@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% block container %}
+<!-- Page Content -->
+<div class="container" style="min-height: 80vh;">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Register
+        <small>Form</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">Register</li>
+    </ol>
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <form name="sentMessage" method="POST">
+                {% csrf_token %}
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>First Name*</label> {{form.first_name}}
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="controls">
+                    <label>Last Name*</label> {{form.last_name}}
+                    <p class="help-block"></p>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Email*</label> {{form.email}}
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div style="color: rgb(243, 9, 9); font-size: 13px;">
+                    {{ form.email.errors}}
+                </div>
+
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Password*</label> {{form.password1}}
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Confirm Password*</label> {{form.password2}}
+                    </div>
+                </div>
+                <div style="color: rgb(243, 9, 9); font-size: 11px;">
+                    {{ form.password2.errors}}
+                </div>
+
+                <div id="success"></div>
+                <!-- For success/fail messages -->
+                <button type="submit" class="btn btn-primary" id="login-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+{% endblock container %}

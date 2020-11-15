@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% block container %}
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Blog Home Two
+        <small>Subheading</small>
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Blog Home 2</li>
+    </ol>
+
+    <!-- Blog Post -->
+    {% for todo in object_list %}
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="#">
+                        <img class="img-fluid rounded" src="http://placehold.it/750x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="card-title">{{ todo.title }}</h2>
+                    <p class="card-text">{{ todo.body }}</p>
+                    <a href="{% url 'FullArticle' todo.id %}" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            Posted on January 1, 2017 by
+            <a href="#">{{ todo.userId }}</a>
+        </div>
+    </div>
+    {% endfor %}
+
+
+
+
+
+    <!-- Pagination -->
+    {% if object_list.has_other_pages %}
+    <ul class="pagination justify-content-center mb-4">
+
+        {% if object_list.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ object_list.previous_page_number }}">&larr; Older</a>
+        </li>
+
+        {% endif %} {% if object_list.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ object_list.next_page_number }}"> &rarr;Newer</a>
+        </li>
+        {% endif %}
+    </ul>
+    {% endif %}
+
+</div>
+<!-- /.container -->
+{% endblock container %}
