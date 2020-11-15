@@ -45,6 +45,18 @@ class User_Details extends Component {
                                     </Link>
                                    
                                 </li>
+                                <li class="nav-item">
+                                    <Link to='/Login'>
+                                    <a class="nav-link">Login</a>
+                                    </Link>
+                                   
+                                </li>
+                                <li class="nav-item">
+                                    <Link to='/Register'>
+                                    <a class="nav-link">Register</a>
+                                    </Link>
+                                   
+                                </li>
 
                             </ul>
                         </div>

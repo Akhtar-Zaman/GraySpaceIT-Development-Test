@@ -27,6 +27,40 @@ class Posts extends Component {
 
     render() {
         return (
+            <div>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+            <Link to='/'> <a class="navbar-brand">User Details</a> </Link>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+
+                        <li class="nav-item">
+                            <Link to='/posts'>
+                            <a class="nav-link">Posts</a>
+                            </Link>
+                           
+                        </li>
+                        <li class="nav-item">
+                            <Link to='/Login'>
+                            <a class="nav-link">Login</a>
+                            </Link>
+                           
+                        </li>
+                        <li class="nav-item">
+                            <Link to='/Register'>
+                            <a class="nav-link">Register</a>
+                            </Link>
+                           
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav><br></br><br></br><br></br>
             <div class="container">
 
             
@@ -78,7 +112,7 @@ class Posts extends Component {
                 </ul>
 
             </div>
-
+</div>
         )
     }
 }

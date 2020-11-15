@@ -13,4 +13,9 @@
 	4. Django Rest Framework Register url = " http://akhtar1611.pythonanywhere.com/rest/api/register "	
 	5. Django Rest Framework User Api url = " http://akhtar1611.pythonanywhere.com/rest/userapi/ "
 
-=> The Reactjs project on the " React-js/exampleposts/src " folder.
+=> The Reactjs project on the " React-js/exampleposts/src " folder. For openning the Reactjs project please follow the instruction bellow.
+	1. First Create a rect app on you machine and go to you project directory.
+	2. Install Axios " npm install axios "
+	3. install React router dom " npm install react-router-dom "
+	4. Install bootstrap " npm install --save bootstrap@latest "
+	5. Finally copy App.js, Login.js, Register.js, Posts.js, Post-Details.js and User-Details from " React-js/exampleposts/src " folder of my 	  rpository to your 'src' directory of react app folder.
